@@ -2,11 +2,6 @@
 
 source ./env.sh
 
-
-database="tpch_sf1000_dict"
-
-options="enable_parquet_encoding = 'true'"
-
 for t in customer lineitem nation orders partsupp part region supplier; do
     echo "DROP TABLE IF EXISTS $database.$t" | bendsql
 done
