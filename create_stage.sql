@@ -1,6 +1,3 @@
-create or replace stage mystage 's3://mydata/mystage/' connection=(
-endpoint_url='http://127.0.0.1:9900',
-access_key_id='minioadmin',
-secret_access_key='minioadmin',
-region='us-east-1'
-);
+create or replace connection myconn  storage_type='s3' access_key_id='x' secret_access_key='x' region=='us-east-1';
+
+create or replace stage mystage 's3://mydata/mystage/' connection=(connection_name='myconn');
