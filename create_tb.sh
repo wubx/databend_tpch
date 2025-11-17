@@ -99,4 +99,4 @@ echo "CREATE TABLE IF NOT EXISTS $database.lineitem
     l_shipinstruct STRING not null,
     l_shipmode     STRING not null,
     l_comment      STRING not null
-) ${storage} ClUSTER BY(l_shipdate, l_orderkey) ${options}" | bendsql
+) ${storage} ClUSTER BY(date_trunc(month,l_shipdate), l_orderkey) ${options}" | bendsql
