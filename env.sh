@@ -1,5 +1,5 @@
-WH="medium-mms5"
-HOST="{租户ID}--${wh}.gw.aliyun-cn-beijing.default.databend.cn"
+#WH="medium-mms5"
+#HOST="{租户ID}--${wh}.gw.aliyun-cn-beijing.default.databend.cn"
 HOST="192.168.1.201"
 USER="wubx"
 PASSWORD="wubxwubx"
@@ -13,6 +13,7 @@ export BENDSQL_DSN="databend://${USER}:${PASSWORD}@${HOST}:${PORT}/${DATABASE}?s
 # Databend Cloud环境 需要注意在 Databend Cloud 需要指定warehouse
 #export BENDSQL_DSN="databend://${USER}:${PASSWORD}@${HOST}:${PORT}/${DATABASE}?warehouse=${WH}"
 
+options="enable_parquet_dictionary = 'true'"
 
 #options="storage_format = 'native' compression = 'lz4'"
 #storage="'s3://wubx/data/' CONNECTION=(CONNECTION_name='wubx_conn') "

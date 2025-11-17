@@ -1,3 +1,4 @@
+settings (enforce_shuffle_join = 1)
 select
     l_shipmode,
     sum(case

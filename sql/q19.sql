@@ -1,3 +1,4 @@
+settings (enforce_shuffle_join = 1)
 SELECT
     sum(l_extendedprice * (1 - l_discount)) AS revenue
 FROM

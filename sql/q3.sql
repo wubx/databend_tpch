@@ -1,4 +1,4 @@
-select
+settings ( enable_bloom_runtime_filter = 0) select
     l_orderkey,
     sum(l_extendedprice * (1 - l_discount)) as revenue,
     o_orderdate,
